@@ -13,4 +13,4 @@ Each file is an independent expected answer against the same frozen Makefile. Ap
 | hybrid.patch | Hybrid | Keep main.c explicit and add the HEADERS macro containing config.h. |
 | implicit.patch | Implicit | Use a %.o: %.c rule, generate and include main.d with GCC -MMD -MP, and remove the .d file on clean. |
 
-These are reference patches for 3B. Patch applicability, build behavior, and the header-change rebuild are checked in the next step.
+These are reference patches for 3B. All four passed a read-only `git apply --check` against the B2 working copy. Applying each patch, building, and validating the later header-change rebuild remain for the next step.
